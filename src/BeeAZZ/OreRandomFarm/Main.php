@@ -27,10 +27,10 @@ class Main extends PluginBase implements Listener{
            if ($Blocksize instanceof Water) {
                 $water = true;
         
-        } else if ($Blocksize instanceof Fence) {
+           } else if ($Blocksize instanceof Fence) {
                 $fence = true;
             }
-          if ($water && $fence) {
+           if ($water && $fence) {
                 $id = mt_rand(1, 20);
               switch ($id) {
                     case 2;
@@ -62,9 +62,6 @@ class Main extends PluginBase implements Listener{
                     case 20;
                         $BlockRamdom = BlockFactory::getInstance()->get(153,0);
                     default:
-                        $BlockRamdom = BlockFactory::getInstance()->get(4,0);
-                        $BlockRamdom = BlockFactory::getInstance()->get(4,0);
-                        $BlockRamdom = BlockFactory::getInstance()->get(4,0);
                         $BlockRamdom = BlockFactory::getInstance()->get(4,0);
                 }
                 $pos = $block->getPosition();
