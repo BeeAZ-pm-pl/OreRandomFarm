@@ -69,7 +69,7 @@ class Main extends PluginBase implements Listener{
                         $BlockRamdom = BlockFactory::getInstance()->get(4,0);
                 }
                 $pos = $block->getPosition();
-                $world = $pos->getWorld()->setBlock($pos, $BlockRamdom, false, false);
+                $world = $pos->getWorld()->setBlock($pos, $BlockRamdom, false);
                 return;
             }
         }
