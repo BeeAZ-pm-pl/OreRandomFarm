@@ -15,7 +15,6 @@ use pocketmine\block\Fence;
 class Main extends PluginBase implements Listener{
     
     public function onEnable(): void{
-        $this->getLogger()->info("PLUGIN ORERANDOMFARM ENABLE");
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
     }
 
@@ -25,10 +24,10 @@ class Main extends PluginBase implements Listener{
         $fence = false;
         for ($i = 2; $i <= 5; $i++) {
       $Blocksize = $block->getSide($i);
-     if ($Blocksize instanceof Water) {
+           if ($Blocksize instanceof Water) {
                 $water = true;
         
-    } else if ($Blocksize instanceof Fence) {
+        } else if ($Blocksize instanceof Fence) {
                 $fence = true;
             }
           if ($water && $fence) {
@@ -39,7 +38,7 @@ class Main extends PluginBase implements Listener{
                         break;
                     case 4;
                         $BlockRamdom = BlockFactory::getInstance()->get(4,0);
-					          case 6;
+		    case 6;
                         $BlockRamdom = BlockFactory::getInstance()->get(16,0);
                         break;
                     case 8;
