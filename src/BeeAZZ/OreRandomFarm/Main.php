@@ -18,7 +18,7 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
     }
 
-        public function onBlockSet(BlockUpdateEvent $event){
+        public function onBlockSet(BlockUpdateEvent $event): void{
         $block = $event->getBlock();
         $water = false;
         $fence = false;
@@ -66,7 +66,7 @@ class Main extends PluginBase implements Listener{
                 }
                 $pos = $block->getPosition();
                 $world = $pos->getWorld()->setBlock($pos, $BlockRamdom, false);
-                return;
+
             }
         }
     }
